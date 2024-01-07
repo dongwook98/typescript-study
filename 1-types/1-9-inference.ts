@@ -1,6 +1,8 @@
 {
   /**
-   * Type Inference
+   * Type Inference 타입 추론
+   * 간단하고 원시타입의 경우에는 타입 추론을 사용해도 되지만
+   * 복잡하고 객체타입인 경우에는 타입 추론을 사용하는것보다는 명시적으로 적어주는게 좋다.
    */
   let text = 'hello';
   function print(message = 'hello') {

@@ -1,5 +1,6 @@
 {
   // JavaScript 💩
+  // 매개변수에 문자열 2개도 전달가능 💩
   function jsAdd(num1, num2) {
     return num1 + num2;
   }
@@ -29,7 +30,7 @@
     });
   }
 
-  // 최신 JavaScript => TypeScript
+  // 최신 JavaScript 문법 => TypeScript
   // Optional parameter
   function printName(firstName: string, lastName?: string) {
     console.log(firstName);
@@ -37,7 +38,17 @@
   }
   printName('동욱', '강');
   printName('예리');
-  printName('철수');
+  printName('철수', undefined);
+
+  // |을 사용하면 인자로 undefined를 무조건 전달해야 해서 귀찮음
+  // |대신에 옵셔널 파라미터를 사용하자.
+  function printName2(firstName: string, lastName: string | undefined) {
+    console.log(firstName);
+    console.log(lastName);
+  }
+  printName2('동욱', '강');
+  printName2('예리'); // 에러 2개의 인수가 필요한데 1개를 가져왔습니다.
+  printName2('철수', undefined);
 
   // Default parameter
   function printMessage(message: string = 'default message') {

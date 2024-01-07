@@ -49,15 +49,14 @@
   let unusable: void = undefined; // 💩
 
   // never
+  // 함수에서 절대 리턴되지 않는 경우에 그것을 명시하기 위해서 쓰임
   // 리턴 절대 사용 할 수 없음
   // 에러를 던지던지, while(true){}를 이용해서 함수가 끝나지 않게 작성해야함
   function throwError(message: string): never {
     // message -> server (log)
     // throw new Error(message);
-    // while (true) {
-
-    // }
-    return;
+    // while (true) { }
+    return; // 에러 'undefined' 형식은 'never' 형식에 할당할 수 없습니다.ts(2322)
   }
   let neverEnding: never; // 💩
 
