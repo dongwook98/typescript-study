@@ -6,8 +6,13 @@
 
   class CoffeeMachine {
     /**
-     * static필드로 등록해두면 클래스로 만드는 인스턴스에 추가하지않아서 메모리낭비X
-     * 만드는 인스턴스마다 공통적으로 쓰이는 필드라면 static필드로 등록
+     * static을 붙이는 순간 BEANS_GRAM_PER_SHOT 상수는
+     * 오브젝트 레벨이 아니라, 클래스 레벨로 (클래스 영역의 메모리에 할당이 한번만 됨)
+     * CoffeeMachine 클래스로 만드는 오브젝트마다 BEANS_GRAM_PER_SHOT 변수가 메모리에 할당X
+     *
+     * static은 정말 변하지 않는 상수 값
+     * 그리고 여러 오브젝트(인스턴스)에 걸쳐서 사용될 수 있는
+     * (즉, 오브젝트의 상태 데이터에 접근할 필요가 없는) 함수들
      */
     static BEANS_GRAM_PER_SHOT: number = 18; // class level
     coffeeBeans: number = 0; // instance (object) level
