@@ -56,4 +56,32 @@
   console.log(coffeeMachine2);
   const coffee2 = coffeeMachine2.makeCoffee(1, true);
   console.log(coffee2);
+
+  /**
+   * 게터와 세터
+   */
+  class User {
+    get fullName(): string {
+      return `${this.firstName} ${this.lastName}`;
+    }
+    private internalAge: number = 3;
+    get age(): number {
+      return this.internalAge;
+    }
+    set age(num: number) {
+      if (num < 0) {
+        throw new Error('num은 0보다 커야함');
+      }
+      this.internalAge = num;
+    }
+    constructor(private firstName: string, public lastName: string) {}
+  }
+  const user = new User('강', '동욱');
+  console.log(user);
+
+  user.age = 6;
+  console.log(user);
+
+  user.lastName = '철수';
+  console.log(user.fullName);
 }
