@@ -32,10 +32,7 @@
     };
   }
 
-  // printLoginState(state)
-  // success -> 🎉 body
-  // fail -> 😭 reason
-  function printLoginState(state: LoginState) {
+  function printLoginState2(state: LoginState) {
     if (state.result === 'success') {
       console.log(`🎉 ${state.response.body}`);
     } else {

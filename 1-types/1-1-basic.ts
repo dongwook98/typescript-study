@@ -41,7 +41,7 @@
   anything = 'hello';
 
   // void
-  // 함수에서 아무것도 리턴하지 않을때 사용
+  // 함수에서 아무것도 리턴하지 않을때 사용, 생략가능(팀원들과 협의)
   function print(): void {
     console.log('hello');
     return;
@@ -61,9 +61,9 @@
   let neverEnding: never; // 💩
 
   // object
-  let obj: object; // 💩
   // 원시타입을 제외한 모든 오브젝트 타입을 할당 할 수 있음 심지어 배열도 가능
   // 이처럼 광범위하고 추상적인 타입은 쓰지않는게 좋음
+  let obj: object; // 💩
   function acceptSomeObject(obj: object) {}
   acceptSomeObject({ name: '동욱' });
   acceptSomeObject({ animal: 'cat' });

@@ -1,12 +1,10 @@
+// 절차형 프로그래밍은 필요한 상수, 데이터, 함수들이 밖에서 서로 뒹굴고 있음
 {
   type CoffeeCup = {
     shots: number;
     hasMilk?: boolean;
   };
 
-  /**
-   * 절차형 프로그래밍은 필요한 상수, 데이터, 함수들이 밖에서 서로 뒹굴고 있음
-   */
   const BEANS_GRAM_PER_SHOT: number = 18;
 
   let coffeeBeansGram: number = 0;

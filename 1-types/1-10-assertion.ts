@@ -28,5 +28,6 @@
   if (button) {
     button.nodeValue;
   }
+  // 좋은 방법 2
   button?.nodeValue;
 }

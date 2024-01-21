@@ -1,6 +1,10 @@
 /**
  * Encapsulation 캡슐화
- * 현재 외부에서 인스턴스 레벨 멤버 변수(coffeeBeansGram)를 직접적으로 수정 할 수 없게 Encapsulation하기 -> private 사용
+ * 현재 외부에서 멤버 변수를 직접적으로 수정 할 수 없게 정보 은닉하기 -> private 사용
+ *
+ * public : 기본값, 외부에서 접근 가능
+ * private : 외부에서 절대 접근X
+ * protected : 외부에서 접근 X, 클래스를 상속한 자식 클래스에서만  접근 가능
  *
  * 외부에서 직접적으로 coffeeBeansGram를 수정하는것이 아니라
  * 우리의 public 함수 fillCoffeeBeans를 통해서 coffeeBeansGram를 수정하게 하고
@@ -12,9 +16,6 @@
     hasMilk?: boolean;
   };
 
-  // public : 기본값, 외부에서 접근 가능
-  // private : 외부에서 절대 접근X
-  // protected : 외부에서 접근 X, 클래스를 상속한 자식 클래스에서만  접근 가능
   class CoffeeMachine {
     private static BEANS_GRAM_PER_SHOT: number = 18;
     private coffeeBeansGram: number = 0;
@@ -62,6 +63,8 @@
 
   /**
    * 게터와 세터
+   * 게터와 세터는 함수이긴 하지만 멤버변수와 똑같이 접근 가능
+   * 게터와 세터는 멤버변수를 통해 어떠한 계산을 해야할때 유용하게 사용 가능
    */
   class User {
     // constructor에 접근 제어자를 붙이면 멤버 변수 선언, 할당 생략 가능

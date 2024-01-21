@@ -1,3 +1,4 @@
+// 함수에서 타입 이용하기 (JS 💩 -> TS ✨)
 {
   // JavaScript 💩
   // 매개변수에 문자열 2개도 전달가능 💩
@@ -21,6 +22,7 @@
   }
 
   // TypeScript ✨
+  // 타입만봐도 어떤값이 필요한지와 어떤값을 리턴하는지 파악 가능
   function FetchNum(id: string): Promise<number> {
     // code ...
     // code ...
